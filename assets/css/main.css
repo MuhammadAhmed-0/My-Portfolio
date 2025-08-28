@@ -7,6 +7,33 @@
 */
 
 /*--------------------------------------------------------------
+# Performance Optimizations
+--------------------------------------------------------------*/
+.lazy {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.lazy.loaded {
+  opacity: 1;
+}
+
+/* Critical CSS for above-the-fold content */
+.hero {
+  contain: layout style paint;
+}
+
+.portfolio-item {
+  contain: layout style;
+}
+
+/* Font display optimization */
+@font-face {
+  font-family: 'Roboto';
+  font-display: swap;
+}
+
+/*--------------------------------------------------------------
 # Font & Color Variables
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
@@ -1619,6 +1646,197 @@ section,
   font-size: 20px;
   margin-right: 8px;
   color: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# Certificates Section
+--------------------------------------------------------------*/
+.certificates {
+  background-color: var(--surface-color);
+  overflow: hidden;
+}
+
+.certificates-carousel-wrapper {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+.certificates-carousel {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 20px 0;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.certificates-carousel::-webkit-scrollbar {
+  display: none; /* WebKit */
+}
+
+.certificate-item {
+  flex: 0 0 280px;
+  background: var(--background-color);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.certificate-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  border-color: var(--accent-color);
+}
+
+.certificate-link {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.certificate-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.certificate-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 120, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+}
+
+.certificate-overlay i {
+  font-size: 24px;
+  color: white;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+}
+
+.certificate-link:hover .certificate-overlay {
+  opacity: 1;
+}
+
+.certificate-link:hover .certificate-overlay i {
+  transform: scale(1);
+}
+
+.certificate-link:hover img {
+  transform: scale(1.05);
+}
+
+.certificate-item h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 10px 0 5px 0;
+  color: var(--heading-color);
+}
+
+.certificate-item p {
+  font-size: 14px;
+  color: var(--accent-color);
+  font-weight: 500;
+  margin: 0;
+}
+
+.cert-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 4px 15px rgba(0, 120, 255, 0.3);
+}
+
+.cert-nav-btn:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 120, 255, 0.4);
+}
+
+.cert-prev {
+  left: 10px;
+}
+
+.cert-next {
+  right: 10px;
+}
+
+@media (max-width: 768px) {
+  .certificates-carousel-wrapper {
+    padding: 0 50px;
+  }
+  
+  .certificate-item {
+    flex: 0 0 250px;
+  }
+  
+  .cert-nav-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+  
+  .cert-prev {
+    left: 5px;
+  }
+  
+  .cert-next {
+    right: 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .certificates-carousel-wrapper {
+    padding: 0 40px;
+  }
+  
+  .certificate-item {
+    flex: 0 0 220px;
+    padding: 15px;
+  }
+  
+  .certificate-item img {
+    height: 160px;
+  }
+  
+  .certificate-item h4 {
+    font-size: 16px;
+  }
+  
+  .certificates-carousel {
+    gap: 20px;
+  }
 }
 
 /*--------------------------------------------------------------

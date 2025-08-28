@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Digital Play</title>
+  <title>Portfolio</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -37,6 +37,27 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
   <meta name="google-site-verification" content="cdLlZspSGJmB9oUmazGReg5zLdiGs67vwRH31XZhmbo" />
+
+  <!-- Performance optimizations -->
+  <link rel="preload" href="assets/css/main.css" as="style">
+  <link rel="preload" href="assets/img/hr.jpg" as="image">
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+  <!-- Critical CSS inline -->
+  <style>
+    body {
+      font-family: "Roboto", sans-serif;
+    }
+
+    .hero {
+      min-height: calc(100vh - 92px);
+    }
+
+    .header {
+      background-color: #000000;
+    }
+  </style>
 </head>
 
 <body class="index-page">
@@ -56,6 +77,7 @@
           <li><a href="#about">About</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#certificates">Certificates</a></li>
           <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
               <li><a href="#">Dropdown 1</a></li>
@@ -105,13 +127,14 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img src="assets/img/hr.jpg" alt="" data-aos="fade-in" loading="lazy">
+      <img src="assets/img/hr.jpg" alt="" data-aos="fade-in" loading="eager" fetchpriority="high">
 
       <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up"
         data-aos-delay="100">
         <h2>I am Muhammad Ahmed</h2>
         <p><span class="typed"
-            data-typed-items="Digital Marketing Strategist, SEO Specialist, PPC Expert, Web Developer"></span></p>
+            data-typed-items="Digital Marketing Strategist, Technical Project Manager, SEO Specialist, PPC Expert, Web Developer"></span>
+        </p>
       </div>
 
     </section><!-- /Hero Section -->
@@ -130,7 +153,6 @@
               </div>
               <div class="col-lg-7 about-info">
                 <p><strong>Name: </strong> <span>Muhammad Ahmed</span></p>
-                <p><strong>Profile: </strong> <span>Digital Marketer</span></p>
                 <p><strong>Email: </strong> <a href="mailto:muhammadahmed7863@gmail.com">muhammadahmed7863@gmail.com</a>
                 </p>
                 <p><strong>Phone: </strong> <a href="https://wa.me/923167648754" target="_blank">+92-3167648754</a></p>
@@ -290,6 +312,32 @@
                 <li>Email Marketing (Increase Sales with Email) - <em>Udemy</em></li>
                 <li>Agile Scrum Master - <em>Simplilearn</em></li>
                 <li>AI For Everyone - <em>Coursera</em></li>
+                <li>Google Search Campaign  - <em>Great Learning Academy</em> </li>
+                <li>Introduction to Cognitive Project Management in AI (CPMAI)™ - <em>PMI</em></li>
+              </ul>
+            </div><!-- End Resume Item -->
+
+            <h3 class="resume-title">Tools I Use</h3>
+            <div class="resume-item">
+              <ul>
+                <li>Google Ads – <em>Paid Advertising</em></li>
+                <li>Meta Ads Manager – <em>Facebook & Instagram Campaigns</em></li>
+                <li>SEMrush & Ahrefs – <em>Keyword Research</em></li>
+                <li>Rankability – <em>Semantic SEO Planning</em></li>
+                <li>Google Analytics – <em>Traffic & Behavior Tracking</em></li>
+                <li>Google Search Console – <em>SEO Performance Monitoring</em></li>
+                <li>Google Tag Manager – <em>Conversion & Event Tracking</em></li>
+                <li>WordPress – <em>Website Development</em></li>
+                <li>Elementor – <em>Drag-and-Drop Page Building</em></li>
+                <li>HTML, CSS, JavaScript – <em>Frontend Development</em></li>
+                <li>Canva – <em>Design & Ad Creatives</em></li>
+                <li>ChatGPT – <em>Content & Coding Assistance</em></li>
+                <li>Claude – <em>AI Help for Coding & Writing</em></li>
+                <li>Google Sheets – <em>Planning & Reporting</em></li>
+                <li>Jira – <em>Project Management</em></li>
+                <li>Notion – <em>Documentation & Collaboration</em></li>
+                <li>Figma – <em>UI/UX Design</em></li>
+                <li>Screaming Frog – <em>Technical SEO Audits</em></li>
               </ul>
             </div><!-- End Resume Item -->
 
@@ -299,7 +347,7 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <h3 class="resume-title">Professional Experience</h3>
             <div class="resume-item">
-              <h4>Team Lead - ERP System</h4>
+              <h4>Team Lead - ERP Project</h4>
               <h5>March 2025 - Present</h5>
               <p><em>EFM Pvt</em></p>
               <ul>
@@ -329,14 +377,14 @@
               </ul>
             </div><!-- End Resume Item -->
             <div class="resume-item">
-              <h4>Digital Marketing Specialist</h4>
+              <h4>Digital Marketing Specialist (Part Time)</h4>
               <h5>June 2024 - Nov 2024</h5>
               <p><em>Cloudlit</em> – Cloud Services</p>
               <ul>
                 <li>Developed and executed comprehensive digital marketing strategies to promote Cloudlit’s cloud
                   services, increasing brand visibility and customer engagement.</li>
                 <li>Managed and optimized PPC campaigns on Google Ads and LinkedIn, resulting in a 40% increase in lead
-                  generation within six months.</li>
+                  generation within 3 months.</li>
                 <li>Worked closely with the content and design teams to create high-quality, targeted landing pages and
                   advertisements, improving conversion rates by 25%.</li>
                 <li>Analyzed digital campaign performance, using data insights to make strategic adjustments and ensure
@@ -575,13 +623,14 @@
 
                   <!-- SEO Projects Start -->
                   <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-seo ">
-                    <img src="assets/img/portfolio/Seo/Seo-1.webp" class="img-fluid" alt="SEO Project For B2B AI Tool">
+                    <img src="assets/img/portfolio/Seo/Seo-1.webp" class="img-fluid" alt="SEO Project For B2B AI Tool"
+                      loading="lazy">
                     <div class="portfolio-info">
                       <h4>SEO Project For B2B AI Tool</h4>
                       <p>101% Increase In Organic Traffic With SEO Strategy For B2B SaaS AI Tool Client</p>
 
                       <a href="assets/img/portfolio/Seo/Seo-1.webp"
-                        title="How We Increased Organic Traffic by 101% for a B2B SaaS Client"
+                        title="How I Increased Organic Traffic by 101% for a B2B SaaS Client"
                         data-gallery="portfolio-gallery-seo" class="glightbox preview-link" data-description="<div>
                                <a href='seo-1.html' style='text-decoration: none;'>
                                  <button style='background-color: #0078ff; color: #ffffff; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 5px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);'>Read Case Study Here</button>
@@ -598,12 +647,12 @@
 
                   <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-seo">
                     <img src="assets/img/portfolio/Seo/Seo-2.webp" class="img-fluid"
-                      alt="SEO Project For Website building AI Tool SaaS Client">
+                      alt="SEO Project For Website building AI Tool SaaS Client" loading="lazy">
                     <div class="portfolio-info">
                       <h4>SEO Project For Website building AI Tool SaaS Client</h4>
                       <p>90% Increase In Organic Traffic With SEO Strategy For Website Building SaaS Client</p>
                       <a href="assets/img/portfolio/Seo/Seo-2.webp"
-                        title="How We Increased Organic Traffic by 90% for SaaS AI Website Building Tool Client"
+                        title="How I Increased Organic Traffic by 90% for SaaS AI Website Building Tool Client"
                         data-gallery="portfolio-gallery-seo" class="glightbox preview-link" data-description="<div>
                                <a href='seo-2.html' style='text-decoration: none;'>
                                  <button style='background-color: #0078ff; color: #ffffff; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 5px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);'>Read Case Study Here</button>
@@ -618,12 +667,12 @@
 
                   <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-seo">
                     <img src="assets/img/portfolio/Seo/Seo-3.webp" class="img-fluid"
-                      alt="SEO Project For Oral Care Niche E-commerce Client">
+                      alt="SEO Project For Oral Care Niche E-commerce Client" loading="lazy">
                     <div class="portfolio-info">
                       <h4>SEO Project For Oral Care Niche E-commerce Client</h4>
                       <p>85% Increase In Organic Traffic With SEO Strategy For Oral Care Niche E-commerce Client</p>
                       <a href="assets/img/portfolio/Seo/Seo-3.webp"
-                        title="How We Increased Organic Traffic by 85% for Oral Care Niche E-commerce Client"
+                        title="How I Increased Organic Traffic by 85% for Oral Care Niche E-commerce Client"
                         data-gallery="portfolio-gallery-seo" class="glightbox preview-link" data-description="<div>
                                <a href='seo-3.html' style='text-decoration: none;'>
                                  <button style='background-color: #0078ff; color: #ffffff; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 5px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);'>Read Case Study Here</button>
@@ -645,7 +694,7 @@
                       <p>67% Increase In Organic Traffic With SEO Strategy For Skin Care Niche E-commerce Client</p>
 
                       <a href="assets/img/portfolio/Seo/Seo-4.webp"
-                        title="How We Increased Organic Traffic by 67% for Skin Care Niche E-commerce Client"
+                        title="How I Increased Organic Traffic by 67% for Skin Care Niche E-commerce Client"
                         data-gallery="portfolio-gallery-seo" class="glightbox preview-link" data-description="<div>
                                <a href='seo-4.html' style='text-decoration: none;'>
                                  <button style='background-color: #0078ff; color: #ffffff; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 5px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);'>Read Case Study Here</button>
@@ -665,7 +714,7 @@
                       <h4>SEO Project For Real Estate Client</h4>
                       <p>89% Increase In Organic Traffic With SEO Strategy For Real Estate Client</p>
                       <a href="assets/img/portfolio/Seo/Seo-5.webp"
-                        title="How We Increased Organic Traffic by 89% for Real Estate Client"
+                        title="How I Increased Organic Traffic by 89% for Real Estate Client"
                         data-gallery="portfolio-gallery-seo" class="glightbox preview-link" data-description="<div>
                                <a href='seo-5.html' style='text-decoration: none;'>
                                  <button style='background-color: #0078ff; color: #ffffff; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 5px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);'>Read Case Study Here</button>
@@ -686,7 +735,7 @@
                       <h4>SEO Project For Local Business Client (Plumbing)</h4>
                       <p>76% Increase In Organic Traffic With SEO Strategy For Local Business Client (Plumbing)</p>
                       <a href="assets/img/portfolio/Seo/Seo-6.webp"
-                        title="How We Increased Organic Traffic by 76% For Local Business Client (Plumbing)"
+                        title="How I Increased Organic Traffic by 76% For Local Business Client (Plumbing)"
                         data-gallery="portfolio-gallery-seo" class="glightbox preview-link" data-description="<div>
                                <a href='seo-6.html' style='text-decoration: none;'>
                                  <button style='background-color: #0078ff; color: #ffffff; border: none; padding: 10px 20px; font-size: 16px; cursor: pointer; border-radius: 5px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);'>Read Case Study Here</button>
@@ -858,13 +907,8 @@
 
                 </div><!-- End Portfolio Container -->
                 <!--Pagination-->
-                <div class="pagination" id="pagination">
-                  <a id="prev">Previous</a>
-                  <a class="page-link" data-page="1">1</a>
-                  <a class="page-link" data-page="2">2</a>
-                  <a class="page-link" data-page="3">3</a>
-                  <a id="next">Next</a>
-                  <p id="page-numbers"> </p>
+                <div class="pagination" id="pagination" style="display: none;">
+                  <!-- Pagination links will be generated dynamically -->
                 </div>
 
               </div>
@@ -878,28 +922,270 @@
               margin-top: 2rem;
               display: flex;
               justify-content: center;
+              align-items: center;
+              flex-wrap: wrap;
+              gap: 5px;
             }
 
             .pagination a {
-              color: #007BFF;
+              color: #0078ff;
               padding: 8px 16px;
               text-decoration: none;
-              border: 1px solid #007BFF;
-              margin: 0 5px;
+              border: 1px solid #0078ff;
+              margin: 0 2px;
               border-radius: 4px;
-
+              transition: all 0.3s ease;
+              cursor: pointer;
+              min-width: 40px;
+              text-align: center;
             }
 
             .pagination a:hover {
-              background-color: #007BFF;
+              background-color: #0078ff;
               color: white;
+              transform: translateY(-2px);
             }
 
             .pagination .active {
-              background-color: #007BFF;
+              background-color: #0078ff;
               color: white;
             }
+
+            .pagination #prev,
+            .pagination #next {
+              font-weight: 600;
+              min-width: auto;
+              padding: 8px 12px;
+            }
+
+            @media (max-width: 576px) {
+              .pagination a {
+                padding: 6px 10px;
+                font-size: 14px;
+                margin: 0 1px;
+              }
+
+              .pagination #prev,
+              .pagination #next {
+                padding: 6px 8px;
+              }
+            }
           </style>
+
+          <!-- Certificates Section -->
+          <section id="certificates" class="certificates section">
+
+            <!-- Section Title -->
+            <div class="container section-title" data-aos="fade-up">
+              <h2>Certifications</h2>
+              <p>Professional certifications that validate my expertise in digital marketing and technology.</p>
+            </div><!-- End Section Title -->
+
+            <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+              <div class="certificates-carousel-wrapper">
+                <div class="certificates-carousel" id="certificatesCarousel">
+
+                  <!-- Certificate Items -->
+                  <div class="certificate-item">
+                    <a href="assets/img/Certificate/Foundation of Digital Marketing and Ecommerce BY Google_page.jpg"
+                      class="glightbox certificate-link" data-gallery="certificates"
+                      title="Foundations of Digital Marketing and E-commerce - Google">
+                      <img src="assets/img/Certificate/Foundation of Digital Marketing and Ecommerce BY Google_page.jpg"
+                        alt="Digital Marketing Certificate" loading="lazy">
+                      <div class="certificate-overlay">
+                        <i class="bi bi-zoom-in"></i>
+                      </div>
+                    </a>
+                    <h4>Foundations of Digital Marketing and E-commerce</h4>
+                    <p>Google</p>
+                  </div>
+
+                  <div class="certificate-item">
+                    <a href="assets/img/Certificate/Digital Advertising 101 by semrush_page-0001-min-min.jpg"
+                      class="glightbox certificate-link" data-gallery="certificates"
+                      title="Digital Advertising 101 - SEMrush">
+                      <img src="assets/img/Certificate/Digital Advertising 101 by semrush_page-0001-min-min.jpg"
+                        alt="Digital Advertising Certificate" loading="lazy">
+                      <div class="certificate-overlay">
+                        <i class="bi bi-zoom-in"></i>
+                      </div>
+                    </a>
+                    <h4>Digital Advertising 101</h4>
+                    <p>SEMrush</p>
+                  </div>
+
+                  <div class="certificate-item">
+                    <a href="assets/img/Certificate/Digital_Marketing_Strategy.jpg" class="glightbox certificate-link"
+                      data-gallery="certificates" title="Digital Marketing Strategy - Simplilearn">
+                      <img src="assets/img/Certificate/Digital_Marketing_Strategy.jpg"
+                        alt="Digital Marketing Strategy Certificate" loading="lazy">
+                      <div class="certificate-overlay">
+                        <i class="bi bi-zoom-in"></i>
+                      </div>
+                    </a>
+                    <h4>Digital Marketing Strategy</h4>
+                    <p>Simplilearn</p>
+                  </div>
+
+                  <div class="certificate-item">
+                    <a href="assets/img/Certificate/Introduction to Cognitive Project Management in AI (CPMAI)™.jpg"
+                      class="glightbox certificate-link" data-gallery="certificates"
+                      title="Introduction to Cognitive Project Management in AI (CPMAI)™ - PMI">
+                      <img
+                        src="assets/img/Certificate/Introduction to Cognitive Project Management in AI (CPMAI)™.jpg"
+                        alt="Project Management Certificate" loading="lazy">
+                      <div class="certificate-overlay">
+                        <i class="bi bi-zoom-in"></i>
+                      </div>
+                    </a>
+                    <h4>Introduction to Cognitive Project Management in AI (CPMAI)™</h4>
+                    <p>PMI</p>
+                  </div>
+                  
+                  <div class="certificate-item">
+                    <a href="assets/img/Certificate/Project Management By Oxford Home Study Centre_page-0001-min-min.jpg"
+                      class="glightbox certificate-link" data-gallery="certificates" title="Project Management - OHSC">
+                      <img
+                        src="assets/img/Certificate/Project Management By Oxford Home Study Centre_page-0001-min-min.jpg"
+                        alt="Project Management Certificate" loading="lazy">
+                      <div class="certificate-overlay">
+                        <i class="bi bi-zoom-in"></i>
+                      </div>
+                    </a>
+                    <h4>Project Management</h4>
+                    <p>Oxford Home Study Center </p>
+                  </div>
+
+                  <div class="certificate-item">
+                    <a href="assets/img/Certificate/Attract and Engage Customers with Digital Marketing_page-0001-min-min.jpg"
+                      class="glightbox certificate-link" data-gallery="certificates"
+                      title="Attract and Engage Customers with Digital Marketing - Google">
+                      <img
+                        src="assets/img/Certificate/Attract and Engage Customers with Digital Marketing_page-0001-min-min.jpg"
+                        alt="Attract and Engage Customers with Digital Marketing Certificate" loading="lazy">
+                      <div class="certificate-overlay">
+                        <i class="bi bi-zoom-in"></i>
+                      </div>
+                    </a>
+                    <h4>Attract and Engage Customers with Digital Marketing</h4>
+                    <p>Google</p>
+                  </div>
+
+                  <div class="certificate-item">
+                    <a href="assets/img/Certificate/Agile_Scrum_Master.jpg" class="glightbox certificate-link"
+                      data-gallery="certificates" title="Agile Scrum Master - Simplilearn">
+                      <img src="assets/img/Certificate/Agile_Scrum_Master.jpg" alt="Project Management Certificate"
+                        loading="lazy">
+                      <div class="certificate-overlay">
+                        <i class="bi bi-zoom-in"></i>
+                      </div>
+                    </a>
+                    <h4>Agile Scrum Master</h4>
+                    <p>Simplilearn</p>
+                  </div>
+
+                  <div class="certificate-item">
+                    <a href="assets/img/Certificate/ai-for-everyone.jpg" class="glightbox certificate-link"
+                      data-gallery="certificates" title="AI For Everyone - Coursera">
+                      <img src="assets/img/Certificate/ai-for-everyone.jpg" alt="AI Certificate" loading="lazy">
+                      <div class="certificate-overlay">
+                        <i class="bi bi-zoom-in"></i>
+                      </div>
+                    </a>
+                    <h4>AI For Everyone</h4>
+                    <p>Coursera</p>
+                  </div>
+
+                  <div class="certificate-item">
+                    <a href="assets/img/Certificate/Interect with customer, Social media Certificate_page-0001-min-min.jpg"
+                      class="glightbox certificate-link" data-gallery="certificates"
+                      title="From Likes to Leads: Interact with Customers Online - Google">
+                      <img
+                        src="assets/img/Certificate/Interect with customer, Social media Certificate_page-0001-min-min.jpg"
+                        alt="From Likes to Leads: Interact with Customers Online Certificate" loading="lazy">
+                      <div class="certificate-overlay">
+                        <i class="bi bi-zoom-in"></i>
+                      </div>
+                    </a>
+                    <h4>From Likes to Leads: Interact with Customers Online</h4>
+                    <p>Google</p>
+                  </div>
+
+                  <div class="certificate-item">
+                    <a href="assets/img/Certificate/Digital marketing certificate_page.jpg"
+                      class="glightbox certificate-link" data-gallery="certificates"
+                      title="The Fundamental of Digital Marketing - Google Garage">
+                      <img
+                        src="assets/img/Certificate/Digital marketing certificate_page.jpg"
+                        alt="Digital Strategy Certificate" loading="lazy">
+                      <div class="certificate-overlay">
+                        <i class="bi bi-zoom-in"></i>
+                      </div>
+                    </a>
+                    <h4>The Fundamental of Digital Marketing</h4>
+                    <p>Google Garage</p>
+                  </div>
+
+                  <div class="certificate-item">
+                    <a href="assets/img/Certificate/Email Marketing. Increase Sales With Email Marketing!_page-0001-min-min.jpg"
+                      class="glightbox certificate-link" data-gallery="certificates"
+                      title="Email Marketing (Increase Sales with Email) - Udemy">
+                      <img
+                        src="assets/img/Certificate/Email Marketing. Increase Sales With Email Marketing!_page-0001-min-min.jpg"
+                        alt="Email Marketing Certificate" loading="lazy">
+                      <div class="certificate-overlay">
+                        <i class="bi bi-zoom-in"></i>
+                      </div>
+                    </a>
+                    <h4>Email Marketing (Increase Sales with Email)</h4>
+                    <p>Udemy</p>
+                  </div>
+
+                  <div class="certificate-item">
+                    <a href="assets/img/Certificate/oxford_digital_marketing_short_course_page-0001-min-min.jpg"
+                      class="glightbox certificate-link" data-gallery="certificates"
+                      title="Digital Marketing (Short Course)- OHSC">
+                      <img
+                        src="assets/img/Certificate/oxford_digital_marketing_short_course_page-0001-min-min.jpg"
+                        alt="Digital Marketing Certificate" loading="lazy">
+                      <div class="certificate-overlay">
+                        <i class="bi bi-zoom-in"></i>
+                      </div>
+                    </a>
+                    <h4>Digital Marketing (Short Course)</h4>
+                    <p>Oxford Home Study Center </p>
+                  </div>
+
+                  <div class="certificate-item">
+                    <a href="assets/img/Certificate/Google search ads_page.jpg"
+                      class="glightbox certificate-link" data-gallery="certificates"
+                      title="Google Search Campaign- GLA">
+                      <img
+                        src="assets/img/Certificate/Google search ads_page.jpg"
+                        alt="Google Search Campaign Certificate" loading="lazy">
+                      <div class="certificate-overlay">
+                        <i class="bi bi-zoom-in"></i>
+                      </div>
+                    </a>
+                    <h4>Google Search Campaign</h4>
+                    <p>Great Learning Academy </p>
+                  </div>
+
+                </div>
+
+                <!-- Navigation Buttons -->
+                <button class="cert-nav-btn cert-prev" id="certPrev">
+                  <i class="bi bi-chevron-left"></i>
+                </button>
+                <button class="cert-nav-btn cert-next" id="certNext">
+                  <i class="bi bi-chevron-right"></i>
+                </button>
+              </div>
+
+            </div>
+
+          </section><!-- /Certificates Section -->
 
 
 
@@ -991,7 +1277,7 @@
                           like Google?</span></h3>
                       <div class="faq-content">
                         <p>Our SEO services can help improve your website's ranking on search engines like Google,
-                          increasing your online visibility and driving more traffic to your site. We'll work with you
+                          increasing your online visibility and driving more traffic to your site. I'll work with you
                           to identify the most relevant keywords for your business and optimize your website to rank
                           higher in search results.</p>
                       </div>
@@ -1013,7 +1299,7 @@
                       <h3><span class="num">3.</span> <span>How do I know if Google Ads are right for my
                           business?</span></h3>
                       <div class="faq-content">
-                        <p>Google Ads can be a great way to drive immediate traffic and conversions to your website. We
+                        <p>Google Ads can be a great way to drive immediate traffic and conversions to your website. I
                           can help you determine if Google Ads are right for your business by analyzing your target
                           audience, competition, and marketing goals. Our Google Ads services can help you create
                           targeted ads that drive results.</p>
@@ -1025,7 +1311,7 @@
                       <h3><span class="num">4.</span> <span>How can I build an email list and create effective email
                           campaigns?</span></h3>
                       <div class="faq-content">
-                        <p>We can help you build an email list and create targeted email campaigns that drive results.
+                        <p>I can help you build an email list and create targeted email campaigns that drive results.
                           Our Email Marketing services include list building, campaign creation, and optimization to
                           ensure you're getting the most out of your email marketing efforts.</p>
                       </div>
@@ -1036,7 +1322,7 @@
                       <h3><span class="num">5.</span> <span>Do I need a new website, or can you improve my existing
                           one?</span></h3>
                       <div class="faq-content">
-                        <p>We can work with you to improve your existing website or build a new one from scratch. Our
+                        <p>I can work with you to improve your existing website or build a new one from scratch. Our
                           Web Development services include website design, development, and optimization to ensure your
                           website is visually appealing, user-friendly, and optimized for search engines.</p>
                       </div>
@@ -1047,7 +1333,7 @@
                       <h3><span class="num">6.</span> <span>How can I measure the success of my digital marketing
                           efforts?</span></h3>
                       <div class="faq-content">
-                        <p>We believe in transparency and accountability. We'll work with you to set clear goals and
+                        <p>I believe in transparency and accountability. I'll work with you to set clear goals and
                           metrics for success, and provide regular reporting and analysis to ensure you're getting the
                           most out of your digital marketing efforts.</p>
                       </div>
@@ -1405,19 +1691,22 @@
   <!--   <div id="preloader"></div> -->
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/vendor/php-email-form/validate.js" defer></script>
+  <script src="assets/vendor/aos/aos.js" defer></script>
+  <script src="assets/vendor/typed.js/typed.umd.js" defer></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js" defer></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js" defer></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js" defer></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+
+  <!-- Performance JS -->
+  <script src="assets/js/performance.js" defer></script>
 
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" defer></script>
 
 
 </body>

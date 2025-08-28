@@ -1,0 +1,10 @@
+.pagination #prev,
+.pagination #next {
+  font-weight: 600;
+  min-width: auto;
+  padding: 8px 12px;
+}
+
+.portfolio-item.hidden-by-pagination {
+  display: none !important;
+}

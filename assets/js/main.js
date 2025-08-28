@@ -163,15 +163,21 @@
         filter: filter,
         sortBy: sort
       });
+      
+      // Store isotope instance globally for pagination
+      window.initIsotope = initIsotope;
+      
+      // Initialize pagination after isotope is ready
+      setTimeout(() => {
+        initPortfolioPagination();
+      }, 100);
     });
 
     isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
       filters.addEventListener('click', function() {
         isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
         this.classList.add('filter-active');
-        initIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
+        // Don't arrange isotope here, let pagination handle it
         if (typeof aosInit === 'function') {
           aosInit();
         }
@@ -209,6 +215,234 @@
   window.addEventListener("load", initSwiper);
 
   /**
+   * Portfolio Pagination
+   */
+  function initPortfolioPagination() {
+    const itemsPerPage = 6;
+    let currentPage = 1;
+    let currentFilter = '*';
+    let portfolioItems = [];
+    let filteredItems = [];
+
+    const portfolioContainer = document.querySelector('.isotope-container');
+    const paginationContainer = document.querySelector('#pagination');
+    
+    if (!portfolioContainer || !paginationContainer) return;
+
+    function updatePortfolioItems() {
+      portfolioItems = Array.from(portfolioContainer.querySelectorAll('.portfolio-item'));
+    }
+
+    function filterItems(filter) {
+      currentFilter = filter;
+      currentPage = 1;
+      
+      if (filter === '*') {
+        filteredItems = portfolioItems;
+      } else {
+        filteredItems = portfolioItems.filter(item => item.classList.contains(filter.replace('.', '')));
+      }
+      
+      updatePagination();
+      showCurrentPage();
+    }
+
+    function showCurrentPage() {
+      // Hide all items first
+      portfolioItems.forEach(item => {
+        item.style.display = 'none';
+        item.classList.add('hidden-by-pagination');
+      });
+
+      // Calculate start and end indices
+      const startIndex = (currentPage - 1) * itemsPerPage;
+      const endIndex = startIndex + itemsPerPage;
+      
+      // Show items for current page
+      const itemsToShow = filteredItems.slice(startIndex, endIndex);
+      itemsToShow.forEach(item => {
+        item.style.display = 'block';
+        item.classList.remove('hidden-by-pagination');
+      });
+
+      // Force isotope to recalculate layout
+      if (window.initIsotope) {
+        // First destroy and recreate isotope
+        window.initIsotope.destroy();
+        
+        setTimeout(() => {
+          // Reinitialize isotope with only visible items
+          window.initIsotope = new Isotope(portfolioContainer, {
+            itemSelector: '.portfolio-item:not(.hidden-by-pagination)',
+            layoutMode: 'masonry',
+            filter: '*',
+            sortBy: 'original-order'
+          });
+          
+          // Trigger AOS animation refresh
+          if (typeof AOS !== 'undefined') {
+            AOS.refresh();
+          }
+        }, 50);
+      }
+    }
+
+    function updatePagination() {
+      const totalPages = Math.ceil(filteredItems.length / itemsPerPage);
+      
+      if (totalPages <= 1) {
+        paginationContainer.style.display = 'none';
+        return;
+      }
+      
+      paginationContainer.style.display = 'flex';
+      
+      // Clear existing pagination
+      paginationContainer.innerHTML = '';
+      
+      // Previous button
+      const prevBtn = document.createElement('a');
+      prevBtn.textContent = 'Previous';
+      prevBtn.id = 'prev';
+      prevBtn.style.display = currentPage === 1 ? 'none' : 'inline-block';
+      prevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (currentPage > 1) {
+          currentPage--;
+          showCurrentPage();
+          updatePagination();
+        }
+      });
+      paginationContainer.appendChild(prevBtn);
+
+      // Page numbers
+      for (let i = 1; i <= totalPages; i++) {
+        const pageLink = document.createElement('a');
+        pageLink.textContent = i;
+        pageLink.classList.add('page-link');
+        pageLink.dataset.page = i;
+        
+        if (i === currentPage) {
+          pageLink.classList.add('active');
+        }
+        
+        pageLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          currentPage = i;
+          showCurrentPage();
+          updatePagination();
+        });
+        
+        paginationContainer.appendChild(pageLink);
+      }
+
+      // Next button
+      const nextBtn = document.createElement('a');
+      nextBtn.textContent = 'Next';
+      nextBtn.id = 'next';
+      nextBtn.style.display = currentPage === totalPages ? 'none' : 'inline-block';
+      nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        if (currentPage < totalPages) {
+          currentPage++;
+          showCurrentPage();
+          updatePagination();
+        }
+      });
+      paginationContainer.appendChild(nextBtn);
+    }
+
+    // Initialize
+    updatePortfolioItems();
+    filterItems('*');
+
+    // Listen for filter changes
+    document.querySelectorAll('.portfolio-filters li').forEach(filterBtn => {
+      filterBtn.addEventListener('click', () => {
+        const filter = filterBtn.getAttribute('data-filter');
+        filterItems(filter);
+      });
+    });
+  }
+
+  /**
+   * Certificates Carousel
+   */
+  function initCertificatesCarousel() {
+    const carousel = document.getElementById('certificatesCarousel');
+    const prevBtn = document.getElementById('certPrev');
+    const nextBtn = document.getElementById('certNext');
+    
+    if (!carousel || !prevBtn || !nextBtn) return;
+    
+    const scrollAmount = 310; // Certificate item width + gap
+    
+    // Next button functionality
+    nextBtn.addEventListener('click', () => {
+      carousel.scrollBy({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Previous button functionality
+    prevBtn.addEventListener('click', () => {
+      carousel.scrollBy({
+        left: -scrollAmount,
+        behavior: 'smooth'
+      });
+    });
+    
+    // Auto-hide/show navigation buttons based on scroll position
+    function updateNavButtons() {
+      const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+      
+      prevBtn.style.opacity = carousel.scrollLeft <= 0 ? '0.5' : '1';
+      nextBtn.style.opacity = carousel.scrollLeft >= maxScroll ? '0.5' : '1';
+      
+      prevBtn.disabled = carousel.scrollLeft <= 0;
+      nextBtn.disabled = carousel.scrollLeft >= maxScroll;
+    }
+    
+    // Update button states on scroll
+    carousel.addEventListener('scroll', updateNavButtons);
+    window.addEventListener('resize', updateNavButtons);
+    
+    // Initial button state
+    updateNavButtons();
+    
+    // Touch/swipe support for mobile
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    
+    carousel.addEventListener('mousedown', (e) => {
+      isDown = true;
+      startX = e.pageX - carousel.offsetLeft;
+      scrollLeft = carousel.scrollLeft;
+      carousel.style.cursor = 'grabbing';
+    });
+    
+    carousel.addEventListener('mouseleave', () => {
+      isDown = false;
+      carousel.style.cursor = 'grab';
+    });
+    
+    carousel.addEventListener('mouseup', () => {
+      isDown = false;
+      carousel.style.cursor = 'grab';
+    });
+    
+    carousel.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - carousel.offsetLeft;
+      const walk = (x - startX) * 2;
+      carousel.scrollLeft = scrollLeft - walk;
+    });
+  }
+
+  /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
   window.addEventListener('load', function(e) {
@@ -224,6 +458,9 @@
         }, 100);
       }
     }
+    
+    // Initialize certificates carousel
+    initCertificatesCarousel();
   });
 
   /**
