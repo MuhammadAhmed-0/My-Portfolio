@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete guide to website speed optimization for better user experience and higher search rankings."> 
+    <title>Website Speed Optimization Guide | Muhammad Ahmed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css"><link rel="stylesheet" href="./blog.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar"><div class="container nav-container"><a href="./index.html" class="logo">Muhammad<span class="logo-accent">Ahmed</span></a><button class="mobile-menu-toggle" id="mobileMenuToggle"><span></span><span></span><span></span></button><ul class="nav-menu" id="navMenu"><li><a href="./index.html" class="nav-link">Home</a></li><li><a href="./index.html#services" class="nav-link">Services</a></li><li><a href="./blog.html" class="nav-link">Blog</a></li><li><a href="./index.html#contact" class="nav-link nav-cta">Get Started</a></li></ul></div></nav>
+    <article>
+        <header class="blog-post-header"><div class="container blog-post-container"><a href="./blog.html" class="post-back-link"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>Back to Blog</a><span class="post-category">Web Development</span><h1 class="post-title">Website Speed Optimization Guide</h1><div class="post-meta"><span class="post-meta-item">March 8, 2025</span><span class="post-meta-item">15 min read</span></div></div></header>
+        <section class="blog-post-content"><div class="container"><div class="post-featured-image">⚡</div><div class="post-content">
+            <p>Website speed is critical for user experience, SEO rankings, and conversion rates. Studies show that 53% of mobile users abandon sites that take longer than 3 seconds to load. This comprehensive guide covers everything you need to optimize your website's performance.</p>
+            <h2>Why Speed Matters</h2>
+            <p>Page speed affects every aspect of your online success. Google uses speed as a ranking factor. Faster sites have lower bounce rates and higher engagement. Every second of delay can reduce conversions by 7%. Mobile users are especially sensitive to slow loading times.</p>
+            <h2>Measuring Current Performance</h2>
+            <p>Before optimizing, measure your baseline performance using tools like Google PageSpeed Insights, GTmetrix, WebPageTest, Chrome DevTools, and Lighthouse. Focus on Core Web Vitals: Largest Contentful Paint (LCP), First Input Delay (FID), and Cumulative Layout Shift (CLS).</p>
+            <h2>Image Optimization</h2>
+            <p>Images are often the largest files on web pages. Compress images without losing quality using tools like TinyPNG or ImageOptim. Use modern formats like WebP for better compression. Implement lazy loading for below-the-fold images. Serve responsive images with srcset. Add proper width and height attributes to prevent layout shift.</p>
+            <h2>Minimize HTTP Requests</h2>
+            <p>Reduce the number of resources your page loads. Combine CSS and JavaScript files. Use CSS sprites for icons. Inline critical CSS. Remove unnecessary plugins and scripts. Defer non-critical JavaScript loading.</p>
+            <h2>Enable Browser Caching</h2>
+            <p>Browser caching stores static resources locally. Set appropriate cache headers for different file types. CSS, JavaScript, and images can be cached for extended periods. Use versioning to bust cache when files change.</p>
+            <h2>Use Content Delivery Network (CDN)</h2>
+            <p>CDNs distribute content across global servers, serving files from the nearest location to users. Popular CDNs include Cloudflare, Amazon CloudFront, and Fastly. CDNs reduce latency and improve load times worldwide.</p>
+            <h2>Minify CSS, JavaScript, and HTML</h2>
+            <p>Minification removes unnecessary characters from code without changing functionality. Use build tools like Webpack, Gulp, or Parcel to automate minification. Enable Gzip or Brotli compression on your server to further reduce file sizes.</p>
+            <h2>Optimize Database Queries</h2>
+            <p>For dynamic sites, database performance is crucial. Optimize queries and use indexes. Implement database caching with Redis or Memcached. Clean up old data regularly. Use connection pooling to reduce overhead.</p>
+            <h2>Implement Critical CSS</h2>
+            <p>Extract and inline CSS needed for above-the-fold content. This allows the initial view to render quickly while other styles load asynchronously. Tools like Critical or Penthouse can automate this process.</p>
+            <h2>Choose Quality Hosting</h2>
+            <p>Your hosting provider significantly impacts speed. Look for providers with SSD storage, adequate resources, good uptime records, and CDN integration. Consider upgrading from shared to VPS or dedicated hosting for better performance.</p>
+            <div class="post-cta"><h3>Need Website Optimization?</h3><p>Let me optimize your website for maximum speed and performance</p><a href="./index.html#contact" class="btn btn-primary">Get Speed Audit</a></div>
+        </div></div></section>
+    </article>
+    <footer class="footer"><div class="container"><div class="footer-content"><div class="footer-about"><h3 class="footer-logo">Muhammad<span class="logo-accent">Ahmed</span></h3><p>Digital Marketing Specialist</p></div></div><div class="footer-bottom"><p>&copy; 2025 Muhammad Ahmed</p></div></div></footer>
+    <script>const navbar=document.getElementById('navbar');const mobileMenuToggle=document.getElementById('mobileMenuToggle');const navMenu=document.getElementById('navMenu');window.addEventListener('scroll',()=>{if(window.scrollY>50)navbar.classList.add('scrolled');else navbar.classList.remove('scrolled');});mobileMenuToggle.addEventListener('click',()=>navMenu.classList.toggle('active'));</script>
+</body>
+</html>
