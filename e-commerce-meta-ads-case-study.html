@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Ads Case Study: Scaling High-AOV E-commerce Store</title>
+    <meta name="description"
+        content="Facebook Ads case study showing how a high-AOV e-commerce store increased purchases by 39% while lowering cost per purchase.">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #2563eb;
+            --secondary-orange: #f97316;
+            --dark-slate: #0f172a;
+            --light-bg: #f8fafc;
+            --success-green: #10b981;
+            --text-dark: #1e293b;
+            --text-gray: #64748b;
+            --text-light: #94a3b8;
+            --border-color: #e2e8f0;
+            --white: #ffffff;
+            --font-heading: 'Poppins', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            background: var(--white);
+            line-height: 1.7;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: var(--font-heading);
+            line-height: 1.3;
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--dark-slate);
+        }
+
+        .logo-accent {
+            color: var(--primary-blue);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-blue);
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--secondary-orange);
+        }
+
+        /* Hero Section */
+        .case-hero {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: var(--white);
+        }
+
+        .case-hero .container {
+            max-width: 1000px;
+        }
+
+        .case-badge {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.2);
+            color: var(--primary-blue);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(37, 99, 235, 0.3);
+        }
+
+        .case-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .case-intro {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+        }
+
+        .case-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .meta-label {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .meta-value {
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        /* Results Highlight */
+        .results-highlight {
+            background: var(--light-bg);
+            padding: 4rem 0;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .result-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .result-number {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .result-label {
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+
+        /* Content Sections */
+        .case-content {
+            padding: 4rem 0;
+        }
+
+        .content-section {
+            margin-bottom: 3.5rem;
+        }
+
+        .content-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            margin-bottom: 1.25rem;
+            color: var(--dark-slate);
+        }
+
+        .section-text {
+            color: var(--text-gray);
+            font-size: 1.05rem;
+        }
+
+        .section-text p {
+            margin-bottom: 1rem;
+        }
+
+        .section-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Strategy List */
+        .strategy-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .strategy-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-gray);
+        }
+
+        .strategy-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 10px;
+            height: 10px;
+            background: var(--primary-blue);
+            border-radius: 50%;
+        }
+
+        .strategy-list li strong {
+            color: var(--text-dark);
+        }
+
+        /* Screenshots / Proof (added) */
+        .screenshots {
+            background: var(--white);
+            padding: 0 0 4rem;
+        }
+
+        .screens-grid {
+            margin-top: 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.25rem;
+        }
+
+        .screen-card {
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            overflow: hidden;
+            background: var(--light-bg);
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+        }
+
+        .screen-caption {
+            padding: 0.9rem 1rem;
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Quote */
+        .client-quote {
+            background: linear-gradient(135deg, var(--dark-slate) 0%, #1e3a5f 100%);
+            padding: 4rem 0;
+            margin: 3rem 0;
+        }
+
+        .quote-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .quote-text {
+            font-size: 1.35rem;
+            color: var(--white);
+            font-style: italic;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .quote-author {
+            color: var(--text-light);
+        }
+
+        .quote-author strong {
+            color: var(--white);
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        /* CTA Section */
+        .case-cta {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #1d4ed8 100%);
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .cta-text {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .btn-white {
+            background: var(--white);
+            color: var(--primary-blue);
+        }
+
+        .btn-white:hover {
+            background: var(--secondary-orange);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--primary-blue);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-slate);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 0.75rem;
+                padding: 0 1.25rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .back-link {
+                font-size: 0.9rem;
+            }
+
+            .case-hero {
+                padding: 8rem 0 3rem;
+            }
+
+            .case-title {
+                font-size: 1.6rem;
+            }
+
+            .case-intro {
+                font-size: 1rem;
+            }
+
+            .case-meta {
+                gap: 1rem;
+                flex-direction: column;
+            }
+
+            .meta-item {
+                text-align: center;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+
+            .result-card {
+                padding: 1.25rem;
+            }
+
+            .result-number {
+                font-size: 2rem;
+            }
+
+            .result-label {
+                font-size: 0.85rem;
+            }
+
+            .section-title {
+                font-size: 1.35rem;
+            }
+
+            .section-text {
+                font-size: 1rem;
+            }
+
+            .quote-text {
+                font-size: 1.05rem;
+            }
+
+            .btn {
+                padding: 0.875rem 1.5rem;
+                font-size: 0.95rem;
+            }
+
+            .container {
+                padding: 0 1.25rem;
+            }
+
+            .case-content {
+                padding: 3rem 0;
+            }
+
+            .results-highlight {
+                padding: 3rem 0;
+            }
+
+            .client-quote {
+                padding: 3rem 0;
+            }
+
+            .case-cta {
+                padding: 3.5rem 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .case-title {
+                font-size: 1.4rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Muhammad<span class="logo-accent">Ahmed</span></a>
+            <a href="index.html#case-studies" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                </svg>
+                Back to Case Studies
+            </a>
+        </div>
+    </nav>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section class="case-hero">
+        <div class="container">
+            <span class="case-badge">Meta Ads</span>
+
+            <h1 class="case-title">
+                How I Scaled a High-AOV E-Commerce Store Using Facebook Ads
+            </h1>
+
+            <p class="case-intro">
+                Facebook Ads scaling campaign for a high-average-order-value e-commerce brand, focused on increasing
+                purchases,
+                reducing cost per purchase, and achieving consistent sales growth at scale.
+            </p>
+
+            <div class="case-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Industry</span>
+                    <span class="meta-value">E-Commerce</span>
+                </div>
+
+                <div class="meta-item">
+                    <span class="meta-label">Services</span>
+                    <span class="meta-value">
+                        Meta Ads (Facebook Ads), Audience Strategy, Creative Testing, Retargeting, Scaling
+                    </span>
+                </div>
+
+                <div class="meta-item">
+                    <span class="meta-label">Client</span>
+                    <span class="meta-value">High-Value Goods E-Commerce Store</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= RESULTS HIGHLIGHT ================= -->
+    <section class="results-highlight">
+        <div class="container">
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-number">39%</div>
+                    <div class="result-label">Increase in Purchases</div>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-number">17%</div>
+                    <div class="result-label">Decrease in Cost per Purchase</div>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-number">↑</div>
+                    <div class="result-label">Consistent Sales Growth</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CASE CONTENT ================= -->
+    <section class="case-content">
+        <div class="container">
+
+            <!-- The Story -->
+            <div class="content-section">
+                <h2 class="section-title">The Story</h2>
+                <div class="section-text">
+                    <p>
+                        I worked with a high-average-order-value (AOV) e-commerce store selling premium products.
+                        The client was running Facebook Ads but struggled to achieve sustainable growth and profitable
+                        scaling.
+                        They needed a strategy that could improve performance while allowing them to confidently
+                        increase ad spend.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Client Challenge -->
+            <div class="content-section">
+                <h2 class="section-title">Client Challenge</h2>
+                <div class="section-text">
+                    <p>
+                        The biggest challenge was cost control at scale. Cost per purchase was high, and whenever the
+                        client tried
+                        to increase budget, performance dropped sharply. Campaign results were inconsistent, making it
+                        difficult
+                        to predict revenue or plan long-term growth.
+                    </p>
+                </div>
+            </div>
+
+            <!-- My Strategy -->
+            <div class="content-section">
+                <h2 class="section-title">My Strategy</h2>
+                <div class="section-text">
+                    <p>
+                        To solve these issues, I implemented a data-driven Facebook Ads strategy focused on scalability,
+                        audience precision, and creative testing:
+                    </p>
+                </div>
+
+                <ul class="strategy-list">
+                    <li><strong>Existing Campaign Audit:</strong> Identified inefficiencies and budget leaks.</li>
+                    <li><strong>Audience Segmentation:</strong> Split campaigns into multiple audience segments.</li>
+                    <li><strong>Custom & Lookalike Audiences:</strong> Built audiences based on buyer and engagement
+                        data.</li>
+                    <li><strong>Creative Diversification:</strong> Used video, carousel, and image ads.</li>
+                    <li><strong>Messaging Tests:</strong> Tested different value propositions and product angles.</li>
+                    <li><strong>Tiered Campaign Structure:</strong> Allocated budget based on performance tiers.</li>
+                    <li><strong>Budget Caps:</strong> Controlled spend to protect profitability.</li>
+                    <li><strong>Dynamic Retargeting:</strong> Re-engaged warm users with tailored messaging.</li>
+                    <li><strong>Upsell Campaigns:</strong> Increased customer lifetime value.</li>
+                    <li><strong>Scaling Winners:</strong> Gradually scaled best-performing ad sets.</li>
+                </ul>
+            </div>
+
+            <!-- The Results (Heading -> Image -> Explanation) -->
+            <div class="content-section">
+                <h2 class="section-title">The Results</h2>
+
+                <img src="assets/casestudies/Facebook-ads-screenshot-high-aov-ecommerce.webp"
+                    alt="Facebook Ads results for high AOV e-commerce store"
+                    style="margin-top:14px;border-radius:14px;border:1px solid rgba(0,0,0,0.08);" />
+
+                <div class="section-text" style="margin-top:16px;">
+                    <p>
+                        The campaign delivered strong and sustainable improvements across key performance metrics:
+                    </p>
+
+                    <ul class="strategy-list">
+                        <li><strong>39%</strong> increase in purchases</li>
+                        <li><strong>17%</strong> reduction in cost per purchase</li>
+                        <li>Consistent and predictable sales growth</li>
+                    </ul>
+
+                    <p>
+                        By refining targeting, improving creatives, and implementing structured scaling, the client was
+                        able
+                        to grow revenue while maintaining profitability.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ================= CLIENT FEEDBACK ================= -->
+    <section class="client-quote">
+        <div class="quote-content">
+            <p class="quote-text">
+                "Scaling was always a problem for us because costs would rise too fast.
+                After restructuring the campaigns and improving targeting, results became much more stable.
+                We were finally able to scale our ad spend without sacrificing profitability."
+            </p>
+            <div class="quote-author">
+                <strong>E-commerce Manager</strong>
+                High-Value Goods Store
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="case-cta">
+        <div class="container">
+            <h2 class="cta-title">Want Results Like This?</h2>
+            <p class="cta-text">
+                If you want more qualified organic traffic and better rankings, let’s talk. I’ll review your website and
+                share a clear plan.
+            </p>
+            <div class="cta-buttons">
+                <a href="index.html#contact" class="btn btn-white">Get a Free Consultation</a>
+                <a href="index.html#case-studies" class="btn btn-outline">View More Case Studies</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Muhammad Ahmed. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

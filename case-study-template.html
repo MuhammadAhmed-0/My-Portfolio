@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Case Study: How I helped a business achieve remarkable growth through strategic digital marketing">
+    <title>Case Study | Muhammad Ahmed - Digital Marketing Expert</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #2563eb;
+            --secondary-orange: #f97316;
+            --dark-slate: #0f172a;
+            --light-bg: #f8fafc;
+            --success-green: #10b981;
+            --text-dark: #1e293b;
+            --text-gray: #64748b;
+            --text-light: #94a3b8;
+            --border-color: #e2e8f0;
+            --white: #ffffff;
+            --font-heading: 'Poppins', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--text-dark);
+            background: var(--white);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-heading);
+            line-height: 1.3;
+            font-weight: 700;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-orange));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--dark-slate);
+        }
+
+        .logo-accent {
+            color: var(--primary-blue);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-blue);
+            font-weight: 500;
+            transition: 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--secondary-orange);
+        }
+
+        /* Hero Section */
+        .case-hero {
+            padding: 8rem 0 4rem;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: var(--white);
+        }
+
+        .case-hero .container {
+            max-width: 1000px;
+        }
+
+        .case-badge {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.2);
+            color: var(--primary-blue);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(37, 99, 235, 0.3);
+        }
+
+        .case-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1.5rem;
+        }
+
+        .case-intro {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+        }
+
+        .case-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .meta-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
+
+        .meta-label {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .meta-value {
+            font-weight: 600;
+            color: var(--white);
+        }
+
+        /* Results Highlight */
+        .results-highlight {
+            background: var(--light-bg);
+            padding: 4rem 0;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .result-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        }
+
+        .result-number {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .result-label {
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+
+        /* Content Sections */
+        .case-content {
+            padding: 4rem 0;
+        }
+
+        .content-section {
+            margin-bottom: 3.5rem;
+        }
+
+        .content-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            margin-bottom: 1.25rem;
+            color: var(--dark-slate);
+        }
+
+        .section-text {
+            color: var(--text-gray);
+            font-size: 1.05rem;
+        }
+
+        .section-text p {
+            margin-bottom: 1rem;
+        }
+
+        .section-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Strategy List */
+        .strategy-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+
+        .strategy-list li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+            color: var(--text-gray);
+        }
+
+        .strategy-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 10px;
+            height: 10px;
+            background: var(--primary-blue);
+            border-radius: 50%;
+        }
+
+        .strategy-list li strong {
+            color: var(--text-dark);
+        }
+
+        /* Timeline */
+        .timeline {
+            margin-top: 2rem;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--border-color);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0.5rem;
+            width: 12px;
+            height: 12px;
+            background: var(--primary-blue);
+            border-radius: 50%;
+            border: 3px solid var(--white);
+            box-shadow: 0 0 0 3px var(--primary-blue);
+        }
+
+        .timeline-period {
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 0.25rem;
+        }
+
+        .timeline-title {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-desc {
+            color: var(--text-gray);
+        }
+
+        /* Quote */
+        .client-quote {
+            background: linear-gradient(135deg, var(--dark-slate) 0%, #1e3a5f 100%);
+            padding: 4rem 0;
+            margin: 3rem 0;
+        }
+
+        .quote-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 2rem;
+        }
+
+        .quote-text {
+            font-size: 1.5rem;
+            color: var(--white);
+            font-style: italic;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .quote-author {
+            color: var(--text-light);
+        }
+
+        .quote-author strong {
+            color: var(--white);
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+
+        /* CTA Section */
+        .case-cta {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #1d4ed8 100%);
+            padding: 5rem 0;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: clamp(1.75rem, 3vw, 2.5rem);
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .cta-text {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .btn-white {
+            background: var(--white);
+            color: var(--primary-blue);
+        }
+
+        .btn-white:hover {
+            background: var(--secondary-orange);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--primary-blue);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-slate);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 0.75rem;
+                padding: 0 1.25rem;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+            }
+
+            .back-link {
+                font-size: 0.9rem;
+            }
+
+            .case-hero {
+                padding: 8rem 0 3rem;
+            }
+
+            .case-title {
+                font-size: 1.6rem;
+            }
+
+            .case-intro {
+                font-size: 1rem;
+            }
+
+            .case-meta {
+                gap: 1rem;
+                flex-direction: column;
+            }
+
+            .meta-item {
+                text-align: center;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+
+            .result-card {
+                padding: 1.25rem;
+            }
+
+            .result-number {
+                font-size: 2rem;
+            }
+
+            .result-label {
+                font-size: 0.85rem;
+            }
+
+            .section-title {
+                font-size: 1.35rem;
+            }
+
+            .section-text {
+                font-size: 1rem;
+            }
+
+            .quote-text {
+                font-size: 1.1rem;
+            }
+
+            .timeline {
+                padding-left: 1.5rem;
+            }
+
+            .timeline-item {
+                padding-left: 1rem;
+            }
+
+            .timeline-item::before {
+                left: -1.5rem;
+            }
+
+            .cta-title {
+                font-size: 1.5rem;
+            }
+
+            .cta-text {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 0.875rem 1.5rem;
+                font-size: 0.95rem;
+            }
+
+            .container {
+                padding: 0 1.25rem;
+            }
+
+            .case-content {
+                padding: 3rem 0;
+            }
+
+            .results-highlight {
+                padding: 3rem 0;
+            }
+
+            .client-quote {
+                padding: 3rem 0;
+            }
+
+            .case-cta {
+                padding: 3.5rem 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .case-title {
+                font-size: 1.4rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Muhammad<span class="logo-accent">Ahmed</span></a>
+            <a href="index.html#case-studies" class="back-link">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M19 12H5M12 19l-7-7 7-7"/>
+                </svg>
+                Back to Case Studies
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="case-hero">
+        <div class="container">
+            <span class="case-badge">E-commerce SEO</span>
+            <h1 class="case-title">How I Increased Organic Traffic by 156% for a Home Decor E-commerce Store</h1>
+            <p class="case-intro">A comprehensive SEO strategy that transformed an underperforming online store into a traffic and revenue generating machine within 8 months.</p>
+            <div class="case-meta">
+                <div class="meta-item">
+                    <span class="meta-label">Industry</span>
+                    <span class="meta-value">Home Decor / E-commerce</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Services</span>
+                    <span class="meta-value">SEO, Content Strategy, Technical Optimization</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Timeline</span>
+                    <span class="meta-value">8 Months</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Highlight -->
+    <section class="results-highlight">
+        <div class="container">
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-number">156%</div>
+                    <div class="result-label">Organic Traffic Increase</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">89%</div>
+                    <div class="result-label">Revenue Growth from SEO</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">2,400+</div>
+                    <div class="result-label">New Ranking Keywords</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">Top 3</div>
+                    <div class="result-label">Rankings for 45 Keywords</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Content -->
+    <section class="case-content">
+        <div class="container">
+            <!-- The Challenge -->
+            <div class="content-section">
+                <h2 class="section-title">The Challenge</h2>
+                <div class="section-text">
+                    <p>When this home decor brand approached me, they were struggling with flat organic traffic despite having a beautiful website and quality products. Their organic channel was generating less than 15% of total revenue, and they were heavily dependent on paid advertising.</p>
+                    <p>The main issues I identified during my initial audit:</p>
+                </div>
+                <ul class="strategy-list">
+                    <li><strong>Poor site architecture</strong> making it difficult for search engines to crawl and index product pages efficiently</li>
+                    <li><strong>Thin product descriptions</strong> with no unique value proposition or keyword optimization</li>
+                    <li><strong>No content strategy</strong> to capture top-of-funnel searches and build topical authority</li>
+                    <li><strong>Technical SEO issues</strong> including slow page speed, duplicate content, and missing structured data</li>
+                    <li><strong>Weak internal linking</strong> leaving valuable pages orphaned with no link equity flowing to them</li>
+                </ul>
+            </div>
+
+            <!-- The Strategy -->
+            <div class="content-section">
+                <h2 class="section-title">My Approach</h2>
+                <div class="section-text">
+                    <p>I developed a comprehensive SEO strategy focused on building a solid technical foundation, creating valuable content, and establishing the brand as an authority in the home decor space.</p>
+                </div>
+                <ul class="strategy-list">
+                    <li><strong>Technical Foundation:</strong> Fixed crawlability issues, improved Core Web Vitals scores, implemented proper schema markup, and resolved duplicate content problems</li>
+                    <li><strong>Keyword Research:</strong> Identified 500+ high-intent keywords across the buyer journey, from informational queries to product-specific searches</li>
+                    <li><strong>Content Strategy:</strong> Created a content calendar with buying guides, style inspiration articles, and product comparison content to capture searchers at every stage</li>
+                    <li><strong>Product Page Optimization:</strong> Rewrote product descriptions with unique, keyword-rich content that highlights benefits and answers common questions</li>
+                    <li><strong>Internal Linking:</strong> Built a strategic internal linking structure that distributed authority to key product and category pages</li>
+                </ul>
+            </div>
+
+            <!-- The Timeline -->
+            <div class="content-section">
+                <h2 class="section-title">Implementation Timeline</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-period">Month 1-2</div>
+                        <div class="timeline-title">Technical Foundation</div>
+                        <div class="timeline-desc">Completed comprehensive technical audit, fixed critical crawl errors, implemented schema markup, and optimized site speed. Core Web Vitals improved from failing to passing on all metrics.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-period">Month 3-4</div>
+                        <div class="timeline-title">On-Page Optimization</div>
+                        <div class="timeline-desc">Rewrote meta titles and descriptions for 200+ pages, optimized product descriptions, fixed internal linking structure, and launched first round of content targeting informational keywords.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-period">Month 5-6</div>
+                        <div class="timeline-title">Content Expansion</div>
+                        <div class="timeline-desc">Published 15 in-depth buying guides and style articles. Started seeing significant ranking improvements for target keywords. Organic traffic up 67% from baseline.</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-period">Month 7-8</div>
+                        <div class="timeline-title">Scaling & Refinement</div>
+                        <div class="timeline-desc">Continued content production, built strategic backlinks, and refined strategy based on performance data. Achieved 156% traffic increase and 89% revenue growth from organic.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Quote -->
+    <section class="client-quote">
+        <div class="quote-content">
+            <p class="quote-text">"Muhammad completely transformed our organic presence. We went from being invisible in search to ranking for hundreds of relevant keywords. The best part is that this traffic converts better than our paid channels because people are finding exactly what they are searching for."</p>
+            <div class="quote-author">
+                <strong>Emily Harrison</strong>
+                Founder, Artisan Home Collective
+            </div>
+        </div>
+    </section>
+
+    <!-- More Content -->
+    <section class="case-content">
+        <div class="container">
+            <div class="content-section">
+                <h2 class="section-title">Key Takeaways</h2>
+                <div class="section-text">
+                    <p>This project reinforced several important principles that I apply to all my e-commerce SEO work:</p>
+                </div>
+                <ul class="strategy-list">
+                    <li><strong>Technical SEO is the foundation.</strong> Without a crawlable, fast website, content optimization efforts will underperform. Always start with the technical basics.</li>
+                    <li><strong>Content builds authority.</strong> Product pages alone cannot compete for informational queries. A robust content strategy captures traffic at every stage of the buyer journey.</li>
+                    <li><strong>Patience pays off.</strong> SEO takes time, but the results compound. The traffic and revenue gains from this project continue to grow months after the initial work.</li>
+                    <li><strong>Data drives decisions.</strong> Regular analysis and willingness to adjust strategy based on what the data shows is crucial for sustained success.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="case-cta">
+        <div class="container">
+            <h2 class="cta-title">Ready to Achieve Similar Results?</h2>
+            <p class="cta-text">I help e-commerce and local businesses grow their organic traffic and revenue through strategic SEO. Let's discuss how I can help your business.</p>
+            <div class="cta-buttons">
+                <a href="index.html#contact" class="btn btn-white">Get a Free Consultation</a>
+                <a href="index.html#case-studies" class="btn btn-outline">View More Case Studies</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Muhammad Ahmed. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

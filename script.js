@@ -92,114 +92,127 @@ animateOnScroll();
 // ===========================
 const caseStudies = [
   {
+    id: "b2b-ai-saas-seo",
     title: "101% Organic Traffic Growth for B2B AI SaaS",
     category: "SEO",
     description: "Increased organic traffic by 101% for a B2B AI SaaS client using a focused SEO strategy.",
     result: "101% traffic growth",
     image: "assets/casestudies/Seo-1.webp",
     alt: "SEO case study: 101% increase in organic traffic for a B2B AI SaaS client",
-    loading: "lazy"
+    url: "b2b-saas-seo-case-study.html"
   },
   {
+    id: "website-builder-saas-seo",
     title: "90% Organic Growth for Website Builder SaaS",
     category: "SEO",
     description: "Achieved a 90% increase in organic traffic for a website building SaaS through SEO optimization.",
     result: "90% traffic increase",
     image: "assets/casestudies/Seo-2.webp",
     alt: "SEO case study: 90% increase in organic traffic for a website builder SaaS client",
-    loading: "lazy"
+    url: "ai-website-building-tool-seo-case-study.html"
   },
   {
+    id: "oral-care-ecommerce-seo",
     title: "85% Organic Growth for Oral Care E-commerce",
     category: "SEO",
     description: "Drove 85% organic traffic growth for an oral care niche e-commerce store using SEO strategy.",
     result: "85% traffic growth",
     image: "assets/casestudies/Seo-3.webp",
     alt: "SEO case study: 85% increase in organic traffic for an oral care e-commerce store",
-    loading: "lazy"
+    url: "oral-care-ecommerce-seo-case-study.html"
   },
   {
+    id: "skincare-ecommerce-seo",
     title: "67% Organic Traffic Increase for Skincare Brand",
     category: "SEO",
     description: "Increased organic traffic by 67% for a skincare niche e-commerce store using SEO best practices.",
     result: "67% traffic growth",
     image: "assets/casestudies/Seo-4.webp",
     alt: "SEO case study: 67% increase in organic traffic for a skincare e-commerce store",
-    loading: "lazy"
+    url: "skin-care-ecommerce-seo-case-study.html"
   },
   {
+    id: "real-estate-seo",
     title: "89% Organic Growth for Real Estate Website",
     category: "SEO",
     description: "Improved organic traffic by 89% for a real estate client through SEO-focused optimization.",
     result: "89% traffic increase",
     image: "assets/casestudies/Seo-5.webp",
     alt: "SEO case study: 89% increase in organic traffic for a real estate website",
-    loading: "lazy"
+    url: "real-estate-seo-case-study.html"
   },
   {
+    id: "local-plumbing-seo",
     title: "76% Organic Growth for Local Plumbing Business",
     category: "SEO",
     description: "Achieved 76% organic traffic growth for a local plumbing business using local SEO strategy.",
     result: "76% traffic growth",
     image: "assets/casestudies/Seo-6.webp",
     alt: "SEO case study: 76% increase in organic traffic for a local plumbing business",
-    loading: "lazy"
+    url: "plumbing-seo-case-study.html"
   },
   {
-    title: "Lead Generation via Facebook Ads for Flooring Business",
+    id: "roofing-google-ads",
+    title: "Lead Growth via Google Ads for Roofing Business",
+    category: "Google Ads",
+    description: "Improved lead quality and ad efficiency for a roofing business.",
+    result: "More qualified leads",
+    image: "assets/casestudies/google-ads-1.webp",
+    alt: "Google Ads case study for roofing business",
+    url: "google-ads-case-study-for-roofing.html"
+  },
+  {
+    id: "local-business-google-ads",
+    title: "34% Lower Cost per Lead with Google Ads",
+    category: "Google Ads",
+    description: "Reduced cost per lead by 34% while increasing lead volume.",
+    result: "34% CPL reduction",
+    image: "assets/casestudies/google-ads-2.webp",
+    alt: "Google Ads optimization case study",
+    url: "google-ads-case-study-for-kitchen-cabinet.html"
+  },
+  {
+    id: "education-google-ads",
+    title: "41% Lead Increase in 30 Days",
+    category: "Google Ads",
+    description: "Increased leads by 41% for a UK education institute.",
+    result: "41% lead growth",
+    image: "assets/casestudies/google-ads-3.webp",
+    alt: "Google Ads case study for education institute",
+    url: "google-ads-case-study-uk-institute.html"
+  },
+  {
+    id: "flooring-facebook-ads",
+    title: "Facebook Ads Lead Generation for Flooring Business",
     category: "Facebook Ads",
-    description: "Maximized lead generation for a flooring business using Facebook Ads campaigns.",
-    result: "Consistent lead growth",
+    description: "Generated consistent leads at a lower cost using Facebook Ads.",
+    result: "406 leads generated",
     image: "assets/casestudies/fb-ads1.webp",
-    alt: "Facebook Ads case study: lead generation campaign for a flooring business",
-    loading: "lazy"
+    alt: "Facebook Ads case study for flooring business",
+    url: "flooring-meta-ads-case-study.html"
   },
   {
-    title: "5.02 ROAS for SaaS Company via Facebook Ads",
+    id: "saas-facebook-ads",
+    title: "5.02x ROAS for SaaS via Facebook Ads",
     category: "Facebook Ads",
-    description: "Achieved a 5.02 ROAS for a SaaS company through optimized Facebook Ads strategy.",
-    result: "5.02 ROAS",
+    description: "Scaled paid acquisition for a SaaS automation tool.",
+    result: "5.02x ROAS",
     image: "assets/casestudies/fb-ads2.webp",
-    alt: "Facebook Ads case study: 5.02 ROAS achieved for a SaaS company",
-    loading: "lazy"
+    alt: "Facebook Ads ROAS case study for SaaS",
+    url: "saas-meta-ads-case-study.html"
   },
   {
+    id: "ecommerce-facebook-ads",
     title: "Scaling High-AOV E-commerce with Facebook Ads",
     category: "Facebook Ads",
-    description: "Scaled a high-AOV e-commerce store using Facebook Ads with optimized targeting and creatives.",
-    result: "Scalable paid growth",
+    description: "Scaled high-ticket e-commerce sales profitably.",
+    result: "39% purchase growth",
     image: "assets/casestudies/fb-ads3.webp",
-    alt: "Facebook Ads case study: scaling a high-AOV e-commerce store with paid social",
-    loading: "lazy"
-  },
-  {
-    title: "33.74% ROAS Growth for Roofing Company",
-    category: "Google Ads",
-    description: "Generated a 33.74% ROAS for a roofing business using targeted Google Ads campaigns.",
-    result: "33.74% ROAS",
-    image: "assets/casestudies/google-ads-1.webp",
-    alt: "Google Ads case study: 33.74% ROAS for a roofing company campaign",
-    loading: "lazy"
-  },
-  {
-    title: "Google Ads Optimization: 34% Cost Reduction",
-    category: "Google Ads",
-    description: "Increased leads by 7% while reducing Google Ads costs by 34% for a local business.",
-    result: "34% lower ad cost",
-    image: "assets/casestudies/google-ads-2.webp",
-    alt: "Google Ads case study: reduced costs by 34% while increasing leads by 7% for a local business",
-    loading: "lazy"
-  },
-  {
-    title: "41% Lead Increase in 30 Days (Education)",
-    category: "Google Ads",
-    description: "Achieved a 41% increase in leads within 30 days for an education provider using Google Ads.",
-    result: "41% more leads",
-    image: "assets/casestudies/google-ads-3.webp",
-    alt: "Google Ads case study: 41% increase in leads in 30 days for an education provider",
-    loading: "lazy"
+    alt: "Facebook Ads scaling case study",
+    url: "e-commerce-meta-ads-case-study.html"
   }
 ];
+
 
 // Render Case Studies
 // ===============================
@@ -240,6 +253,13 @@ function renderCaseStudies() {
         <div class="case-study-result">
           ${study.result}
         </div>
+        <a href="${study.url}" class="case-study-read-more">
+          Read Full Case Study
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
       </div>
     `;
 
@@ -548,9 +568,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ===========================
+// FAQ Accordion
+// ===========================
+const initFAQs = () => {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', () => {
+            const isActive = item.classList.contains('active');
+            
+            faqItems.forEach(faq => faq.classList.remove('active'));
+            
+            if (!isActive) {
+                item.classList.add('active');
+                question.setAttribute('aria-expanded', 'true');
+            } else {
+                question.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+};
+
+// ===========================
 // Initialize Everything
 // ===========================
 document.addEventListener('DOMContentLoaded', () => {
     renderCaseStudies();
     renderBlogPreview();
+    initFAQs();
 });
